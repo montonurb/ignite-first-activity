@@ -22,7 +22,7 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
-  var count = 0;
+  var count = 0; //variável que controla a contagem
   @override
   Widget build(BuildContext context) {
     return Scaffold(
