@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class AppWidget extends StatelessWidget {
@@ -6,6 +8,27 @@ class AppWidget extends StatelessWidget {
     return MaterialApp(
       title: "Meu Primeiro App",
       home: HomePage(),
+      themeMode: ThemeMode.system,
+      theme: ThemeData(
+        textTheme: TextTheme(
+          bodyText2: TextStyle(color: Colors.white),
+        ),
+        primaryColor: Colors.purple,
+        scaffoldBackgroundColor: Colors.purpleAccent,
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+          backgroundColor: Colors.purple,
+        ),
+      ),
+      darkTheme: ThemeData(
+        textTheme: TextTheme(
+          bodyText2: TextStyle(color: Colors.white),
+        ),
+        primaryColor: Colors.black,
+        scaffoldBackgroundColor: Colors.grey,
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+          backgroundColor: Colors.black,
+        ),
+      ),
     );
   }
 }
@@ -22,16 +45,16 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.purple,
       appBar: AppBar(
-        backgroundColor: Colors.purpleAccent,
         title: Text("Contador"),
         centerTitle: true,
       ),
       body: Center(
         child: Text(
           "Contagem: $count",
-          style: TextStyle(color: Colors.white, fontSize: 18),
+          style: TextStyle(
+            fontSize: 18,
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
@@ -42,9 +65,7 @@ class HomePageState extends State<HomePage> {
         },
         child: Icon(
           Icons.add,
-          color: Colors.white,
         ),
-        backgroundColor: Colors.purpleAccent,
       ),
     );
   }
