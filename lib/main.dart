@@ -13,7 +13,7 @@ class AppWidget extends StatelessWidget {
       title: "Meu Primeiro App",
       home: HomePage(),
       themeMode: ThemeMode.system,
-      theme: ThemeApp().themelight,
+      theme: ThemeApp().themeLight,
       darkTheme: ThemeApp().themeDark,
     );
   }

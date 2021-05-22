@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ThemeApp {
-  final themelight = ThemeData(
+  final themeLight = ThemeData(
     textTheme: TextTheme(
       bodyText2: TextStyle(color: Colors.white),
     ),
